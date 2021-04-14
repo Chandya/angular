@@ -1,0 +1,59 @@
+<app-header></app-header>
+
+<app-main-menu></app-main-menu>
+
+<section id="content" class="content">
+  <h3>Create New Asset</h3>
+  <br />
+
+  <form #createAssetForm="ngForm" (ngSubmit)="create(createAssetForm)">
+    <table width="100%">
+      <tr>
+        <td width="20%" style="font-weight: bold;">Asset ID</td>
+        <td>
+          <input
+            id="assetId"
+            name="assettId"
+            #productId="ngModel"
+            type="text"
+            [(ngModel)]="newAsset.assetId"
+            required="true"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td width="20%" style="font-weight: bold;">Asset Name</td>
+        <td>
+          <input
+            id="assetName"
+            name="assetName"
+            type="text"
+            [(ngModel)]="newAsset.assetName"
+            required="true"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td width="20%" style="font-weight: bold;">Asset Type</td>
+        <td>
+            <select>
+                    <option>ACCOUNT</option>
+                    <option>ADMIN_DOMAIN</option>
+                    <option>APPLICATION</option>
+                    <option>APPLICATION_INFRASTRUCTURE</option>
+                    <option>APPLICATION_SERVICE</option>
+                               
+			</select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="text-align: center;">
+          <input type=button (click)="clear()" value="Clear">
+          &nbsp;
+          <input type="submit" value="Create New Asset" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,48 @@
+<app-header></app-header>
+
+<app-main-menu></app-main-menu>
+
+
+<section id="content" class="content">
+
+<h3>Risk Assessment</h3>
+    <br/>
+
+<label>Pick An Asset Category:</label>&nbsp;
+<select>
+  <option value="account">ACCOUNT</option>
+  <option value="admin_domain">ADMIN_DOMAIN</option>
+  <option value="application">APPLICATION</option>
+  <option value="application_infrastructure">APPLICATION_INFRASTRUCTURE</option>
+  <option value="bios_element">BIOS_ELEMENT</option>
+  <option value="cluster">CLUSTER</option>
+  <option value="communication_endpoint">COMMUNICATION_ENDPOINT</option>
+  <option value="connectivity_collection">CONECTIVITY_COLLECTION</option>
+  <option value="connectivity_segment">CONNECTIVITY_SEGMENT</option>
+  <option value="database">DATABASE</option>
+</select>
+
+	
+<table id="tableProductCatalogue" style="width:100%;">
+		<thead>
+			<tr>				
+				<th>Risk Scenario ID</th>
+				<th>Risk Scenario</th>
+				<th>Asset</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let riskScenario of riskScenarios">
+				<td>{{riskScenario.riskScenarioId}}</td>
+				<td>{{riskScenario.riskScenarioName}}</td>				
+				<td>{{riskScenario.assets}}</td>
+			</tr>
+		</tbody>
+    </table>
+
+    <input type="submit" value="Submit" />
+    
+
+</section>
+
+<app-footer></app-footer>

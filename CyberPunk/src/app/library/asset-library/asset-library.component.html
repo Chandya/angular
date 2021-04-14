@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<app-main-menu></app-main-menu>
+
+<section id="content" class="content">
+  <h2>Asset Library</h2>
+  <br />
+
+  <div class="actions">
+      <input type="button" (click)="createAsset()" value="createAsset" />
+
+  </div>
+
+  <h3>All Assets</h3>
+
+  <table id="tableProductCatalogue" style="width:100%;">
+    <thead>
+      <tr>
+        <th>Asset ID</th>
+        <th>Name</th>
+        <th>Asset Type</th>
+        <th>Update Asset</th>
+        <th>Delete Asset</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let asset of assets">
+        <td>{{ asset.assetId }}</td>
+        <td>{{ asset.assetName }}</td>
+        <td>{{ asset.assetType }}</td>
+        <td><a routerLink="/library/updateAsset">Update</a></td>
+        <td><a routerLink="/library/deleteAsset">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,36 @@
+<app-header></app-header>
+		
+<app-main-menu></app-main-menu>		
+
+<section id="content" class="content">
+			
+	<article *ngIf="sessionService.getIsLogin() == false">
+      <h3>Welcome to Cyberpunk!</h3>
+
+      <p>
+        This is registration page:
+      </p>
+      <input type="button" value="Register" class="button"/>
+      &nbsp;
+      <input type="button" value="Know more about us" class="button"/>
+	</article>
+	
+	<ng-template [ngIf]="sessionService.getIsLogin() == true">		
+		<br/><br/>
+		
+		<div>
+      <h1>dashboard goes here</h1>
+      <p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magnam explicabo, voluptatem accusantium pariatur aspernatur quos ratione reiciendis quasi in non hic porro doloremque dicta optio, nobis totam nam at.</span>
+        <span>Culpa autem ad dignissimos ipsa aspernatur est magni, dolore tempora architecto recusandae ab laboriosam, inventore itaque illo esse rem. Repellat saepe consequuntur voluptates asperiores praesentium, rem aliquam libero dolores ea.</span>
+        <span>Eligendi, enim. Voluptatum natus voluptas consequuntur inventore voluptatem et, dolor cum iste debitis eaque nemo perferendis fugit aspernatur facere cumque consectetur incidunt modi, mollitia tempora molestiae veritatis magni adipisci explicabo.</span>
+        <span>Nisi ab dolor vel earum. Quam similique vel modi consectetur suscipit nobis atque, nemo eveniet voluptatum maiores? Rerum, laborum sequi minus quis voluptates modi iste dolorum laudantium ducimus non consequatur?</span>
+        <span>Nam porro inventore error exercitationem, blanditiis debitis nobis, pariatur iure a animi repudiandae et vitae voluptatibus quidem, dolor nulla labore aspernatur quia hic asperiores officia! Ratione aperiam at nesciunt inventore!</span>
+        <span>Facilis eveniet adipisci sit distinctio veniam suscipit dolores quia maxime neque labore ratione perspiciatis, nesciunt, excepturi repellendus iste vel ad, rerum pariatur a optio blanditiis. Saepe maxime accusamus magni voluptatum.</span>
+      </p>
+		</div>
+	</ng-template>
+</section>
+
+<app-footer></app-footer>
+
